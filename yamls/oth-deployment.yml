@@ -5,7 +5,7 @@ metadata:
     app: myboot-1
   name: myboot-1
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: myboot-1
