@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: myboot-1
+  name: myboot-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myboot-1
+  template:
+    metadata:
+      labels:
+        app: myboot-1
+    spec:
+      containers:
+      - name: myboot
+        image: quay.io/rhdevelopers/myboot:v2
+        ports:
+          - containerPort: 8080
